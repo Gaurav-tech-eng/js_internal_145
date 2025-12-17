@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn't break layouts */
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Attractive gradient background */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    color: #333;
+}
+
+/* --- Main Containers (Card Style) --- */
+.container, .output-container {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 15px; /* Softer, rounder corners */
+    /* Deep, soft shadow for a "floating" effect */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 500px; /* Slightly wider for better breathing room */
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+/* Subtle lift effect on hover for containers */
+.container:hover, .output-container:hover {
+    transform: translateY(-3px);
+}
+
+/* --- Headings --- */
+h2, h3 {
+    text-align: center;
+    color: #444;
+    font-weight: 600;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* Add a small decorative underline to headings */
+h2::after, h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* --- Form Elements --- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Styling Inputs and Select Dropdown */
+input[type="text"], select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease; /* Smooth transition for focus state */
+}
+
+/* Interactive Focus State (Glow effect) */
+input:focus, select:focus {
+    outline: none;
+    border-color: #667eea;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+/* --- Buttons --- */
+button {
+    width: 100%;
+    padding: 12px;
+    /* Gradient background for button */
+    background: linear-gradient(to right, #28a745, #218838);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+/* Button Hover Effects (Lift and brighten) */
+button:hover {
+    background: linear-gradient(to right, #34ce57, #28a745);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.4);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(40, 167, 69, 0.3);
+}
+
+/* Error Messages */
+.error {
+    color: #e74c3c;
+    font-size: 0.85em;
+    margin-top: 5px;
+    display: none;
+    font-weight: 500;
+}
+
+/* --- Table Styling --- */
+.output-container {
+    max-width: 600px; /* Make table container slightly wider */
+}
+
+table {
+    width: 100%;
+    border-collapse: separate; /* Required for border-radius on rows */
+    border-spacing: 0;
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden; /* Hides corners of headers */
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    /* Attractive header gradient */
+    background: linear-gradient(to right, #55637d, #3d4a63);
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* Zebra Striping for easier reading */
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Hover effect on table rows */
+tbody tr:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.2s ease;
+}
